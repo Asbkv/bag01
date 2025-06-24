@@ -1,0 +1,42 @@
+#details {
+  padding: 40px 0;
+  .details {
+    &--card {
+      display: flex;
+      align-items: center;
+      gap: 150px;
+      img {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.078);
+        overflow: hidden;
+        height: 400px;
+        // border: 2px solid black;
+        width: 40%;
+        object-fit: contain;
+      }
+      &__text {
+        padding: 40px 50px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.696);
+        overflow: hidden;
+        width: 700px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        h2 {
+          font-size: 45px;
+          font-weight: 600;
+        }
+        h3 {
+          font-size: 25px;
+          font-weight: 600;
+          color: red;
+        }
+         h4 {
+          font-size: 25px;
+          font-weight: 600;
+          color: yellowgreen;
+        }
+      }
+    }
+  }
+}

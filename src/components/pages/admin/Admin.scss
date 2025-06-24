@@ -1,0 +1,29 @@
+#admin {
+  padding: 40px 0;
+  .admin {
+    &--form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      input {
+        width: 300px;
+        padding: 10px 10px;
+        border: none;
+        font-size: 20px;
+        outline: none;
+        border-bottom: 1px solid black;
+      }
+      button {
+        padding: 10px 30px;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 18px;
+
+
+      }
+    }
+  }
+}
