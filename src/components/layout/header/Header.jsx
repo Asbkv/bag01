@@ -7,7 +7,8 @@ import { MdOutlineLightMode } from "react-icons/md";
 
 const Header = () => {
   const navigate = useNavigate();
-  const dark  = useSelector((s) => s.dark);
+  const dark = useSelector((s) => s.dark);
+  const basket = useSelector((s) => s.basket);
   const dispatch = useDispatch();
   return (
     <header id="header">
@@ -18,6 +19,7 @@ const Header = () => {
             <NavLink to={"/"}>home</NavLink>
             <NavLink to={"/favorite"}>Favorite</NavLink>
             <NavLink to={"/basket"}>Basket</NavLink>
+            {basket.length ? <h3>{basket.length}</h3> : null}
             <NavLink to={"/product"}>Product</NavLink>
             <button onClick={() => navigate("/admin")}>Admin</button>
             {dark ? (

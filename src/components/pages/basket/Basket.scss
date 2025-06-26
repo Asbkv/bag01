@@ -2,71 +2,111 @@
   padding: 40px 0;
   .basket {
     display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-    width: 590px;
-    height: 600px;
-    gap: 20px;
-    &--card {
-      padding: 20px;
+    align-items: center;
+    gap: 130px;
+    &--block {
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-      height: 130px;
-      border: 2px solid black;
-      border-radius: 15px;
-      position: relative;
-      img {
-        object-fit: contain;
-      }
-      h1 {
-        font-size: 28px;
-        font-weight: 700;
-      }
-      &__info {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        h2 {
-          color: red;
-          font-size: 22px;
-          font-weight: 700;
-        }
-      }
-      &__count {
+      flex-direction: column;
+      overflow-y: scroll;
+      width: 590px;
+      height: 600px;
+      gap: 20px;
+      &__card {
+        padding: 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 120px;
-        height: 30px;
+        gap: 30px;
+        height: 130px;
         border: 2px solid black;
-        button {
-          width: 30px;
-          height: 30px;
-          font-size: 24px;
-          background: black;
-          color: white;
+        border-radius: 15px;
+        position: relative;
+        img {
+          object-fit: contain;
+        }
+        h1 {
+          font-size: 28px;
+          font-weight: 700;
+        }
+        &--info {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          h2 {
+            color: red;
+            font-size: 22px;
+            font-weight: 700;
+          }
+        }
+        &--count {
           display: flex;
           align-items: center;
-          justify-content: center;
-          border: none;
+          justify-content: space-between;
+          width: 120px;
+          height: 30px;
+          border: 2px solid black;
+          button {
+            width: 30px;
+            height: 30px;
+            font-size: 24px;
+            background: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+          }
+          h5 {
+            font-size: 18px;
+            color: yellowgreen;
+          }
         }
-        h5 {
-          font-size: 18px;
-          color: yellowgreen;
+        &--delete {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: red;
+          color: white;
+          font-size: 25px;
+          padding: 10px;
+          border: none;
+          border-radius: 0 15px 0 15px;
         }
       }
-      &__delete {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: red;
-        color: white;
-        font-size: 25px;
-        padding: 10px;
-        border: none;
-        border-radius: 0 15px 0 15px;
+    }
+    .basket--total {
+      margin-top: 25px;
+      padding: 20px;
+      background: #e0e5ec;
+      border-radius: 15px;
+      text-align: right;
+      box-shadow: 8px 8px 15px rgba(163, 177, 198, 0.7),
+        -8px -8px 15px rgba(255, 255, 255, 0.8);
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+
+      h3 {
+        color: black;
+        font-size: 1.5rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 12px 12px 20px rgba(163, 177, 198, 0.7),
+          -12px -12px 20px rgba(255, 255, 255, 0.8);
+
+        h3 {
+          color: #2d3748;
+          text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+      }
+
+      &:active {
+        transform: translateY(0);
+        box-shadow: 4px 4px 10px rgba(163, 177, 198, 0.7),
+          -4px -4px 10px rgba(255, 255, 255, 0.8);
       }
     }
   }

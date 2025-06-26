@@ -1,5 +1,12 @@
-
-    .card {
+#favorite {
+  padding: 140px 0;
+  .favorite {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 130px;
+    &--card {
       width: 300px;
       height: 450px;
       background: white;
@@ -20,7 +27,7 @@
         flex-direction: column;
         gap: 10px;
 
-        h1 {
+        h2 {
           font-size: 22px;
           font-weight: 600;
           color: #333;
@@ -42,19 +49,13 @@
           display: inline-block;
           align-self: center;
         }
-        &--icons {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 40px;
-          text-align: center;
+
+        a {
+          cursor: pointer;
+          background: none;
+          font-size: 27px;
+          color: red;
           margin-top: 10px;
-          a {
-            cursor: pointer;
-            background: none;
-            font-size: 23px;
-            color: black;
-          }
         }
       }
 
@@ -67,4 +68,5 @@
         // border-bottom: 1px solid #eee;
       }
     }
-  
+  }
+}

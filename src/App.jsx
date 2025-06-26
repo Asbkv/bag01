@@ -7,9 +7,11 @@ import Product from "./components/pages/product/Product";
 import Details from "./components/pages/details/Details";
 import Basket from "./components/pages/basket/Basket";
 import { useSelector } from "react-redux";
+import { ToastContainer } from "react-toastify";
+import Favorite from "./components/pages/favorite/Favorite";
 
 function App() {
-  const  dark  = useSelector((s) => s.dark);
+  const dark = useSelector((s) => s.dark);
   const routes = [
     {
       id: 1,
@@ -36,6 +38,11 @@ function App() {
       path: "/basket",
       element: <Basket />,
     },
+    {
+      id: 6,
+      path: "/favorite",
+      element: <Favorite/>
+    },
   ];
   return (
     <div
@@ -46,6 +53,7 @@ function App() {
       }}
     >
       <Header />
+      <ToastContainer />
       <Routes>
         {routes.map((el) => (
           <Route path={el.path} element={el.element} key={el.id} />

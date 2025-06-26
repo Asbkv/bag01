@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Admin.scss";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 const Admin = () => {
   const [productUrl, setProductUrl] = useState("");
@@ -10,6 +10,7 @@ const Admin = () => {
   const [productPrice, setProductPrice] = useState("");
   const [productCategory, setProductCategory] = useState("");
    const [sortAZ, setSortAZ] = useState(true);
+   const product = useSelector((s) => s.product)
 
   const dispatch = useDispatch();
   function AddProduct() {
@@ -46,7 +47,7 @@ const Admin = () => {
       );
       dispatch({ type: "ADD_PRODUCT", payload: newData });
       toast.success("🦄 Wow so easy!", {
-        position: "top-center",
+        position: "bottom-center",
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: false,

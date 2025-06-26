@@ -12,6 +12,7 @@
       display: flex;
       align-items: center;
       gap: 40px;
+      position: relative;
       .active {
         color: white;
       }
@@ -20,6 +21,20 @@
         font-size: 22px;
         color: #ffffff96;
         text-transform: capitalize;
+      }
+      h3 {
+        position: absolute;
+        top: 0;
+        left: 285px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 23px;
+        height: 23px;
+        background: red;
+        color: white;
+        border-radius: 50%;
+        font-size: 18px;
       }
       button {
         font-size: 22px;
